@@ -1,6 +1,65 @@
-html {
-    background: rgb(255 222 235);
+body {
+    background-color: rgb(255 222 235);
     margin: 0;
     width: 100%;
     height: 100vh
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+
+    .title {
+        font-family: 'Press Start 2P', cursive;
+        background: linear-gradient(90deg, #ff4da6, #ff79c6, #b967ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: transform 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  
+        &:hover {
+          transform: scale(1.3);
+        }
+    }
+
+    a {
+        margin-left: 7px;
+        margin-right: 7px;
+        text-decoration: none;
+        color: #ff79c6; // Cor inicial (rosa claro)
+        font-weight: normal;
+        transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+        &:hover {
+            color: #b967ff; // Cor ao passar o mouse (roxo claro)
+            transform: scale(1.1); // Efeito de crescimento leve
+        }
+    }
+
+    .btn-primary {
+        background: #d578e5;
+        border: 2px solid #d578e5;
+        transition: all 0.3s ease;     /* Transição suave */
+    }
+    
+    .btn-primary:hover {
+      background-color: #FF1493;    
+      color: white;                 
+      border-color: #FF69B4;        
+    }
+    
+    .btn-primary:active {
+      background-color: #FF69B4;
+      color: white;        
+      border-color: #FF1493;        
+    }
+
+    .btn-primary:focus {
+      outline: none;
+      box-shadow: 0 0 10px rgba(255, 20, 147, 0.5); 
+    }
 }
