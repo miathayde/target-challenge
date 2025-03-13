@@ -1,1 +1,47 @@
-<p>faturamento-diario works!</p>
+<div class="page">
+    <h2 class="title">Faturamento diário</h2>
+
+    <div class="content mt-3 d-flex flex-column">
+        <div class="row">
+            <div class="col menor-faturamento">
+                <p><b>Menor faturamento mensal</b></p>
+                <p>
+                    <span style="margin-right: 15px;"><b>Dia: </b>{{ menorFaturamento.dia }}</span>
+                    <span><b>Valor: </b>{{ menorFaturamento.valor }}</span>
+                </p>
+            </div>
+            <div class="col maior-faturamento">
+                <p><b>Maior faturamento mensal</b></p>
+                <p>
+                    <span style="margin-right: 15px;"><b>Dia: </b>{{ maiorFaturamento.dia }}</span>
+                    <span><b>Valor: </b>{{ maiorFaturamento.valor }}</span>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col faturamentos-superiores-media mt-3">
+                <p><b>Dias em que o faturamento foi superior à média:</b></p>
+                <p>
+                    <span style="margin-right: 15px;"><b>Dia: </b>{{ menorFaturamento.dia }}</span>
+                    <span><b>Valor: </b>{{ menorFaturamento.valor }}</span>
+                </p>
+            </div>
+        </div>
+        <div class="table-container mt-4">
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Dia</th>
+                    <th scope="col">Valor</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of faturamentosMensais; let index = index;">
+                        <th>{{ item.dia }}</th>
+                        <th>{{ item.valor }}</th>
+                    </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>

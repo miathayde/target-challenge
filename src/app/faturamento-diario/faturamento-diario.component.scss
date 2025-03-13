@@ -1,0 +1,34 @@
+.menor-faturamento {
+    background: rgb(199, 70, 92);
+    border-radius: 6px;
+    margin-left: 13px;
+}
+
+.maior-faturamento {
+    background: rgb(42, 194, 118);
+    border-radius: 6px;
+    margin-left: 13px;
+}
+
+.faturamentos-superiores-media {
+    background: pink;
+    border-radius: 6px;
+    margin-left: 13px;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.table-container {
+    width: 500px;
+    height: 300px;
+    overflow: auto;
+  }
+  
+table {
+    width: 100%;
+    table-layout: fixed;
+}
