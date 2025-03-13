@@ -1,1 +1,32 @@
-<p>fibonacci works!</p>
+<div class="page">
+    <h2 class="title">Fibonacci</h2>
+
+    <div class="content mt-3">
+        <div class="form row d-flex justify-content-center">
+            <div class="col">
+                <input type="number" class="form-control" id="number" 
+                placeholder="Insira um número" [(ngModel)]="number">
+            </div>
+            <div class="col d-flex justify-content-between">
+                <button type="submit" class="btn btn-primary" (click)="gerarSequencia()">Enviar</button>
+                <button type="submit" class="btn btn-primary" (click)="limpar()">Limpar</button>
+            </div>
+        </div>
+        <div class="row mt-3" *ngIf="exibirResultado != null">
+            <div class="col custom-background">
+                <div *ngIf="exibirResultado">
+                    <p>O número {{ resultado }} pertence à sequência de Fibonacci!! :D</p>
+                    <p>Resultado:</p>
+                    <p><span *ngFor="let item of sequenciaFibonacci; let last = last;">
+                        <span>{{ item }}</span>
+                        <span *ngIf="!last">, </span>
+                        <span *ngIf="last">...</span>
+                    </span></p>
+                </div>
+                <div *ngIf="!exibirResultado">
+                    <p>O número {{ resultado }} não pertence à sequência de Fibonacci :(</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
