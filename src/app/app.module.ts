@@ -8,6 +8,7 @@ import { InitialPageComponent } from './initial-page/initial-page.component';
 import { FaturamentoDiarioComponent } from './faturamento-diario/faturamento-diario.component';
 import { FaturamentoEstadoComponent } from './faturamento-estado/faturamento-estado.component';
 import { InversaoStringComponent } from './inversao-string/inversao-string.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { InversaoStringComponent } from './inversao-string/inversao-string.compo
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
