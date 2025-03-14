@@ -11,6 +11,8 @@ export class FaturamentoDiarioComponent implements OnInit {
   faturamentosMensais: Array<Faturamento> = new Array<Faturamento>();
   menorFaturamento: Faturamento;
   maiorFaturamento: Faturamento;
+  media: number;
+  faturamentosSuperioresMedia: Array<Faturamento> = new Array<Faturamento>();
 
   constructor(private http: HttpClient) { }
 
@@ -50,6 +52,13 @@ export class FaturamentoDiarioComponent implements OnInit {
   }
 
   obterFaturamentosSuperioresMedia() {
-    const faturamentos = this.faturamentosMensais.filter(x => x.valor != 0);
+    var totalFaturamentos = 0;
+    this.faturamentosMensais.forEach(x => {
+      totalFaturamentos += x.valor;
+    });
+
+    const faturamentosNaoZerados = this.faturamentosMensais.filter(x => x.valor != 0).length;
+    this.media = Number((totalFaturamentos / faturamentosNaoZerados).toFixed(4));
+    this.faturamentosSuperioresMedia = this.faturamentosMensais.filter(i => i.valor > this.media);
   }
 }

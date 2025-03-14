@@ -10,7 +10,7 @@
     margin-left: 13px;
 }
 
-.faturamentos-superiores-media {
+.border-table {
     background: pink;
     border-radius: 6px;
     margin-left: 13px;
@@ -25,7 +25,8 @@ p {
 .table-container {
     width: 500px;
     height: 300px;
-    overflow: auto;
+    overflow-y: auto;
+    margin-bottom: 1rem;
   }
   
 table {
