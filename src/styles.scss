@@ -62,4 +62,27 @@ body {
       outline: none;
       box-shadow: 0 0 10px rgba(255, 20, 147, 0.5); 
     }
+
+    .border-table {
+      background: pink;
+      border-radius: 6px;
+      margin-left: 13px;
+  }
+  
+  .table-container {
+      width: 500px;
+      max-height: 300px;
+      overflow-y: auto;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+    
+  table {
+      width: 100%;
+      table-layout: fixed;
+  }
+
+  p {
+    text-align: center;
+  }
 }
