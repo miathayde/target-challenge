@@ -10,26 +10,8 @@
     margin-left: 13px;
 }
 
-.border-table {
-    background: pink;
-    border-radius: 6px;
-    margin-left: 13px;
-}
-
 p {
     display: flex;
     justify-content: center;
     margin-top: 5px;
-}
-
-.table-container {
-    width: 500px;
-    height: 300px;
-    overflow-y: auto;
-    margin-bottom: 1rem;
-  }
-  
-table {
-    width: 100%;
-    table-layout: fixed;
 }
