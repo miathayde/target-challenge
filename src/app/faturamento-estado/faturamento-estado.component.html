@@ -1,1 +1,30 @@
-<p>faturamento-estado works!</p>
+<div class="page mt-4">
+    <h2 class="title">Faturamentos mensais</h2>
+
+    <div class="content mt-3 d-flex flex-column">
+        <div class="row mb-4">
+            <div class="col border-table mt-3">
+                <p><b>Faturamentos mensais por estado da distribuidora:</b></p>
+                <div class="table-container">
+                    <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Faturamento mensal (R$)</th>
+                            <th scope="col">Percentual de faturamento (%)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of faturamentosMensaisEstados">
+                                <th>{{ item.estado }}</th>
+                                <th>{{ item.faturamento }}</th>
+                                <th>{{ item.percentualFaturamento }}</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><b>Total de faturamento mensal: </b>R${{ totalFaturamentos }}</p>
+            </div>
+        </div>
+    </div>
+</div>
